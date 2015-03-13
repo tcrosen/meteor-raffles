@@ -1,4 +1,6 @@
 Meteor.startup(function() {
+  Raffles.remove({});
+
   if (Raffles.find().count() === 0) {
     Raffles.insert({
       title: 'iPad Air',
@@ -10,7 +12,7 @@ Meteor.startup(function() {
 
     Raffles.insert({
       title: 'Michael Kors Purse',
-      mainImage: 'images/purse.jpg',
+      mainImage: 'images/purse.jpeg',
       startDate: new Date(2015, 04, 1),
       endDate: new Date(2015, 04, 30),
       isActive: false
