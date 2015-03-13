@@ -1,3 +1,3 @@
 Template.home.helpers({
-  raffles: Raffles.find({})
+  currentRaffle: Raffles.current()
 });
