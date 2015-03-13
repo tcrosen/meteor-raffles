@@ -11,7 +11,11 @@ Meteor.startup(function() {
       mainImage: 'images/gopro.jpg',
       startDate: yesterday.toDate(),
       endDate: yesterday.toDate(),
-      isActive: false
+      retailPrice: 300.00,
+      entryPrice: 3.00,
+      maxEntries: 100,
+      isActive: false,
+      entries: []
     });
 
     Raffles.insert({
@@ -19,7 +23,11 @@ Meteor.startup(function() {
       mainImage: 'images/ipad.jpeg',
       startDate: today.toDate(),
       endDate: tomorrow.toDate(),
-      isActive: true
+      retailPrice: 500.00,
+      entryPrice: 5.00,
+      maxEntries: 100,
+      isActive: true,
+      entries: [1,2,3]
     });
 
     Raffles.insert({
@@ -27,7 +35,11 @@ Meteor.startup(function() {
       mainImage: 'images/purse.jpeg',
       startDate: tomorrow.toDate(),
       endDate: tomorrow.toDate(),
-      isActive: false
+      retailPrice: 900.00,
+      entryPrice: 10.00,
+      maxEntries: 100,
+      isActive: false,
+      entries: []
     });
 
     console.log(Raffles.find().fetch());

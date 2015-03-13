@@ -3,5 +3,17 @@ body {
 }
 
 .raffle {
+  text-align: center;
+}
 
+.raffle > h1 {
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+
+.raffle > p {
+  padding-bottom: 20px;
+}
+
+.raffle-main-image {
 }
