@@ -1,3 +1,5 @@
 Template.home.helpers({
-  currentRaffle: Raffles.current()
+  currentRaffle: function() {
+    return Raffles.current();
+  }
 });
