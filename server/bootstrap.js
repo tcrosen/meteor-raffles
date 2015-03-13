@@ -1,21 +1,35 @@
+var today = moment().hours(0).minutes(0).seconds(0);
+var yesterday = today.clone().subtract(1, 'days');
+var tomorrow = today.clone().add(1, 'days');
+
 Meteor.startup(function() {
   Raffles.remove({});
 
   if (Raffles.find().count() === 0) {
     Raffles.insert({
+      title: 'GoPro',
+      mainImage: 'images/gopro.jpg',
+      startDate: yesterday.toDate(),
+      endDate: yesterday.toDate(),
+      isActive: false
+    });
+
+    Raffles.insert({
       title: 'iPad Air',
       mainImage: 'images/ipad.jpeg',
-      startDate: new Date(2015, 03, 1),
-      endDate: new Date(2015, 03, 30),
+      startDate: today.toDate(),
+      endDate: tomorrow.toDate(),
       isActive: true
     });
 
     Raffles.insert({
       title: 'Michael Kors Purse',
       mainImage: 'images/purse.jpeg',
-      startDate: new Date(2015, 04, 1),
-      endDate: new Date(2015, 04, 30),
+      startDate: tomorrow.toDate(),
+      endDate: tomorrow.toDate(),
       isActive: false
     });
+
+    console.log(Raffles.find().fetch());
   }
 });

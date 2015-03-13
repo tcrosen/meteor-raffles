@@ -1,4 +1,7 @@
 <template name="raffle">
-  <h3>{{ raffle.title }}</h3>
-  <img src="{{ raffle.mainImage }}" />
+  <div class="raffle">
+    <h3 class="raffle-title">{{ title }}</h3>
+    <p class="raffle-ends">Ends: {{ ends }}</p>
+    <img class="raffle-main-image" src="{{ mainImage }}" alt="{{ title }}">
+  </div>
 </template>
