@@ -8,3 +8,9 @@ Template.raffle.helpers({
     return moment(this.endDate).fromNow(true);
   }
 });
+
+// Template.raffle.events({
+//   'click .btn-buy-ticket': function (e, template) {
+//     console.log(template);
+//   }
+// });
