@@ -17,6 +17,7 @@ blaze-tools@1.0.2
 boilerplate-generator@1.0.2
 callback-hook@1.0.2
 check@1.0.4
+coffeescript@1.0.5
 dburles:mongo-collection-instances@0.3.3
 ddp@1.0.14
 deps@1.0.6
@@ -27,6 +28,7 @@ follower-livedata@1.0.3
 geojson-utils@1.0.2
 gwendall:session-json@0.1.7
 handlebars@1.0.2
+houston:admin@2.0.3
 html-tools@1.0.3
 htmljs@1.0.3
 http@1.0.10
@@ -76,6 +78,7 @@ spiderable@1.0.6
 srp@1.0.2
 stylus@1.0.6
 templating@1.0.11
+tmeasday:paginated-subscription@0.2.4
 tracker@1.0.5
 twbs:bootstrap@3.3.2
 ui@1.0.5

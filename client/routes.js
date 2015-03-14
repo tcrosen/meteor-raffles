@@ -58,8 +58,8 @@ Router.map(function() {
     }
   });
 
-  this.route('admin', {
-    path: '/admin',
+  this.route('tools', {
+    path: '/tools',
     onBeforeAction: checkAdmin
   });
 });

@@ -1,4 +1,6 @@
-Template.admin.events({
+Template.tools.helpers({});
+
+Template.tools.events({
   'click .btn-seed-raffles': function(e) {
     e.preventDefault();
 
