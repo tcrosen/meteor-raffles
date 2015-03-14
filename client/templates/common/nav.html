@@ -8,9 +8,10 @@
       </div>
 
       <ul class="nav navbar-nav">
-        <li><a href="{{ pathFor 'home' }}">Home</a></li>
         <li><a href="{{ pathFor 'raffles' }}">Raffles</a></li>
+        {{#if isAdmin}}
         <li><a href="{{ pathFor 'admin' }}">Admin</a></li>
+        {{/if}}
       </ul>
       <p class="navbar-text navbar-right">{{> loginButtons}}</p>
     </div>

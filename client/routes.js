@@ -2,6 +2,14 @@ Router.configure({
   layoutTemplate: 'layout'
 });
 
+var checkAdmin = function() {
+  if (!Meteor.user()) {
+    this.redirect('/');
+  } else {
+    this.next();
+  }
+};
+
 Router.map(function() {
   this.route('home', {
     path: '/'
@@ -17,6 +25,12 @@ Router.map(function() {
     }
   });
 
+  this.route('raffleCreate', {
+    path: '/raffles/new',
+    template: 'raffleCreate',
+    onBeforeAction: checkAdmin
+  });
+
   this.route('raffle', {
     path: '/raffles/:_id',
     template: 'raffleView',
@@ -28,6 +42,7 @@ Router.map(function() {
   this.route('raffleEdit', {
     path: '/raffles/:_id/edit',
     template: 'raffleEdit',
+    onBeforeAction: checkAdmin,
     data: function() {
       return Raffles.findOne(this.params._id)
     }
@@ -35,13 +50,7 @@ Router.map(function() {
 
   this.route('admin', {
     path: '/admin',
-    onBeforeAction: function() {
-      if (!Meteor.user()) {
-        this.redirect('/');
-      } else {
-        this.next();
-      }
-    }
+    onBeforeAction: checkAdmin
   });
 
   //this.route('enterRaffle', { path: '/raffles/:id/enter' });
