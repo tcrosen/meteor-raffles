@@ -61,6 +61,25 @@ var raffleSchema = new SimpleSchema({
       return maxEntries - numEntries;
     }
   },
+  revenue: {
+    type: Number,
+    optional: true,
+    autoValue: function() {
+      if (this.isInsert || this.isUpsert || this.isUpdate) {
+        var entries = this.field('entries'),
+          entryPrice = this.field('entryPrice').value,
+          numEntries = 0;
+
+        if (entries.isSet && entries.value.length) {
+          numEntries = entries.value.length;
+        }
+
+        return entryPrice * numEntries;
+      } else {
+        this.unset();
+      }
+    }
+  },
   // Force value to be current date (on server) upon insert
   // and prevent updates thereafter.
   createdAt: {

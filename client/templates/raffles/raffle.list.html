@@ -1,28 +1,32 @@
 <template name="raffleList">
   <div class="col-xs-12">
-    <table class="table table-striped">
-      <thead>
+    <table class="table table-bordered">
+      <thead class="centered">
         <tr>
           <th></th>
-          <th>Starts</th>
-          <th>Ends</th>
-          <th>Ticket Price</th>
-          <th>Retail Price</th>
+          <th>Start<br>Date</th>
+          <th>End<br>Date</th>
+          <th>Tickets<br>Sold</th>
+          <th>Ticket<br>Price</th>
+          <th>Item<br>Cost</th>
+          <th>Revenue</th>
           {{#if isAdmin}}
-          <th>Admin</th>
+          <th></th>
           {{/if}}
         </tr>
       </thead>
       <tbody>
       {{#each raffles}}
-        <tr>
+        <tr class="{{ getContextClass this }}">
           <td><a href="{{ pathFor route='raffleView' }}" title="Click for raffle details">{{ title }}</a></td>
-          <td>{{ prettyDate date=startDate format='ddd, MMMM DD HH:mm' }}</td>
-          <td>{{ prettyDate date=endDate format='ddd, MMMM DD HH:mm' }}</td>
-          <td>{{ currency entryPrice }}</td>
-          <td>{{ currency retailPrice }}</td>
+          <td>{{ prettyDate date=startDate format='ddd, MMMM DD HH:mm:ss' }}</td>
+          <td>{{ prettyDate date=endDate format='ddd, MMMM DD HH:mm:ss' }}</td>
+          <td class="align-right">{{ entries.length }} / {{ maxEntries }}</td>
+          <td class="align-right">{{ currency entryPrice }}</td>
+          <td class="align-right">{{ currency retailPrice }}</td>
+          <td class="align-right">{{ currency revenue }}</td>
           {{#if isAdmin}}
-          <td><a href="{{ pathFor route='raffleEdit' }}"><i class="glyphicon glyphicon-cog"></i></a></td>
+          <td class="align-center"><a href="{{ pathFor route='raffleEdit' }}"><i class="glyphicon glyphicon-cog"></i></a></td>
           {{/if}}
         </tr>
       {{/each}}

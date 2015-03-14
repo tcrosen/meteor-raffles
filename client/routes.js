@@ -30,7 +30,7 @@ Router.map(function() {
     template: 'raffleList',
     data: function() {
       return {
-        raffles: Raffles.find()
+        raffles: Raffles.find({}, { sort: { endDate: 1 }})
       };
     }
   });

@@ -13,6 +13,18 @@ footer p {
   color: #888;
 }
 
+table > thead.centered > tr > th {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
 .raffle {
   text-align: center;
 }

@@ -19,12 +19,22 @@ var getMockEntries = function(n) {
 }
 
 var rafflesSeed = [{
+  title: 'Beats By Dre Headphones',
+  mainImage: '/images/beatsbydre.jpg',
+  startDate: setDaysFromToday(-2),
+  endDate: setDaysFromToday(-1),
+  retailPrice: 400,
+  entryPrice: 6,
+  maxEntries: 80,
+  isActive: false,
+  entries: getMockEntries(63)
+}, {
   title: 'GoPro',
   mainImage: '/images/gopro.jpg',
   startDate: setDaysFromToday(-1),
   endDate: setDaysFromToday(0),
   retailPrice: 300,
-  entryPrice: 3,
+  entryPrice: 4,
   maxEntries: 100,
   isActive: false,
   entries: getMockEntries(100)
@@ -33,8 +43,8 @@ var rafflesSeed = [{
   mainImage: '/images/ipad.jpeg',
   startDate: setDaysFromToday(0),
   endDate: setDaysFromToday(1),
-  retailPrice: 500.00,
-  entryPrice: 5.00,
+  retailPrice: 500,
+  entryPrice: 6,
   maxEntries: 100,
   isActive: true,
   entries: getMockEntries(24)
@@ -44,7 +54,7 @@ var rafflesSeed = [{
   startDate: setDaysFromToday(1),
   endDate: setDaysFromToday(2),
   retailPrice: 900.00,
-  entryPrice: 10.00,
+  entryPrice: 10,
   maxEntries: 100,
   isActive: false,
   entries: getMockEntries(0)
