@@ -1,6 +1,4 @@
 var today = moment().hours(0).minutes(0).seconds(0);
-var yesterday = today.clone().subtract(1, 'days');
-var tomorrow = today.clone().add(1, 'days');
 
 Meteor.startup(function() {
   Raffles.remove({});
@@ -9,8 +7,8 @@ Meteor.startup(function() {
     Raffles.insert({
       title: 'GoPro',
       mainImage: 'images/gopro.jpg',
-      startDate: yesterday.toDate(),
-      endDate: yesterday.toDate(),
+      startDate: today.clone().subtract(1, 'days').toDate(),
+      endDate: today.toDate(),
       retailPrice: 300.00,
       entryPrice: 3.00,
       maxEntries: 100,
@@ -22,7 +20,7 @@ Meteor.startup(function() {
       title: 'iPad Air',
       mainImage: 'images/ipad.jpeg',
       startDate: today.toDate(),
-      endDate: tomorrow.toDate(),
+      endDate: today.clone().add(1, 'days').toDate(),
       retailPrice: 500.00,
       entryPrice: 5.00,
       maxEntries: 100,
@@ -33,8 +31,8 @@ Meteor.startup(function() {
     Raffles.insert({
       title: 'Michael Kors Purse',
       mainImage: 'images/purse.jpeg',
-      startDate: tomorrow.toDate(),
-      endDate: tomorrow.toDate(),
+      startDate: today.clone().add(1, 'days').toDate(),
+      endDate: today.clone().add(2, 'days').toDate(),
       retailPrice: 900.00,
       entryPrice: 10.00,
       maxEntries: 100,

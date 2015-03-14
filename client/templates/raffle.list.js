@@ -1,1 +1,3 @@
-Template.raffleList.helpers({});
+Template.raffleList.helpers({
+
+});
