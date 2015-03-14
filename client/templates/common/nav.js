@@ -1,5 +1,6 @@
 Template.nav.helpers({
   isAdmin: function() {
-    return Meteor.user() && Meteor.user().admin;
+    var user = Meteor.user();
+    return user && Roles.userIsInRole(user, 'admin');
   }
 });

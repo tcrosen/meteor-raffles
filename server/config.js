@@ -2,6 +2,7 @@ Accounts.config({
   sendVerificationEmail: true
 });
 
+// https://github.com/alanning/meteor-roles/blob/master/examples/rolesWithAccountsUI/server/setRolesOnUserObj.js
 Roles.setRolesOnUserObj = function(users, roles, group) {
   if (!users) throw new Error("Missing 'users' param")
   if (!roles) throw new Error("Missing 'roles' param")
