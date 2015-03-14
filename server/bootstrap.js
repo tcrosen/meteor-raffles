@@ -41,7 +41,5 @@ Meteor.startup(function() {
       isActive: false,
       entries: []
     });
-
-    console.log(Raffles.find().fetch());
   }
 });

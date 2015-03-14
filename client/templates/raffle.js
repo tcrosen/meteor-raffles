@@ -1,6 +1,7 @@
 Template.raffle.helpers({
   ticketsRemaining: function() {
-    return this.maxEntries - this.entries.length;
+    var numEntries = this.entries && this.entries.length;
+    return this.maxEntries - numEntries;
   },
 
   ends: function() {
