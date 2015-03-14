@@ -1,8 +1,6 @@
 var today = moment().hours(0).minutes(0).seconds(0);
 
 Meteor.startup(function() {
-  Raffles.remove({});
-
   if (Raffles.find().count() === 0) {
     Raffles.insert({
       title: 'GoPro',
