@@ -3,7 +3,12 @@ Template.home.helpers({
     return Raffles.current();
   },
 
-  raffles: function() {
-    return Raffles.find({}, { sort: { endDate: -1 }, limit: 3 })
+  ticketsRemaining: function() {
+    var numEntries = this.entries && this.entries.length;
+    return this.maxEntries - numEntries;
+  },
+
+  ends: function() {
+    return moment(this.endDate).fromNow(true);
   }
 });

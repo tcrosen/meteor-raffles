@@ -2,11 +2,16 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="{{ pathFor 'home' }}">
           Daily Raffles
         </a>
       </div>
 
+      <ul class="nav navbar-nav">
+        <li><a href="{{ pathFor 'home' }}">Home</a></li>
+        <li><a href="{{ pathFor 'raffles' }}">Raffles</a></li>
+        <li><a href="{{ pathFor 'admin' }}">Admin</a></li>
+      </ul>
       <p class="navbar-text navbar-right">{{> loginButtons}}</p>
     </div>
   </nav>

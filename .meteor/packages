@@ -12,3 +12,7 @@ mrt:moment
 spiderable
 iron:router
 insecure
+autopublish
+msavin:mongol
+aldeed:autoform
+aldeed:collection2

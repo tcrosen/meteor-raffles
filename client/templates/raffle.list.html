@@ -1,0 +1,7 @@
+<template name="raffleList">
+  <ul>
+  {{#each raffles}}
+    <li><a href="{{ pathFor route='raffleEdit' }}">{{ title }}</a></li>
+  {{/each}}
+  </ul>
+</template>

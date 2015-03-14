@@ -27,7 +27,7 @@ Meteor.startup(function() {
       entryPrice: 5.00,
       maxEntries: 100,
       isActive: true,
-      entries: [1,2,3]
+      entries: [{ userId: 100 }, { userId: 200 }, { userId: 300 }]
     });
 
     Raffles.insert({
