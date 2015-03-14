@@ -6,11 +6,11 @@
           <th></th>
           <th>Start<br>Date</th>
           <th>End<br>Date</th>
+          {{#if isAdmin}}
           <th>Tickets<br>Sold</th>
           <th>Ticket<br>Price</th>
           <th>Item<br>Cost</th>
           <th>Revenue</th>
-          {{#if isAdmin}}
           <th></th>
           {{/if}}
         </tr>
@@ -21,11 +21,11 @@
           <td><a href="{{ pathFor route='raffleView' }}" title="Click for raffle details">{{ title }}</a></td>
           <td>{{ prettyDate date=startDate format='ddd, MMMM DD HH:mm:ss' }}</td>
           <td>{{ prettyDate date=endDate format='ddd, MMMM DD HH:mm:ss' }}</td>
-          <td class="align-right">{{ entries.length }} / {{ maxEntries }}</td>
+          {{#if isAdmin}}
+          <td class="align-right"><a href="{{ pathFor route='raffleView' hash='entries' }}">{{ entries.length }} / {{ maxEntries }}</a></td>
           <td class="align-right">{{ currency entryPrice }}</td>
           <td class="align-right">{{ currency retailPrice }}</td>
           <td class="align-right">{{ currency revenue }}</td>
-          {{#if isAdmin}}
           <td class="align-center"><a href="{{ pathFor route='raffleEdit' }}"><i class="glyphicon glyphicon-cog"></i></a></td>
           {{/if}}
         </tr>
