@@ -1,24 +1,32 @@
 <template name="raffleList">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Starts</th>
-        <th>Ends</th>
-        <th>Ticket Price</th>
-        <th>Retail Price</th>
-      </tr>
-    </thead>
-    <tbody>
-    {{#each raffles}}
-      <tr>
-        <td><a href="{{ pathFor route='raffleEdit' }}">{{ title }}</a></td>
-        <td>{{ prettyDate startDate }}</td>
-        <td>{{ prettyDate endDate }}</td>
-        <td>{{ currency entryPrice }}</td>
-        <td>{{ currency retailPrice }}</td>
-      </tr>
-    {{/each}}
-    </tbody>
-  </table>
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Starts</th>
+          <th>Ends</th>
+          <th>Ticket Price</th>
+          <th>Retail Price</th>
+          {{#if isAdmin}}
+          <th>Admin</th>
+          {{/if}}
+        </tr>
+      </thead>
+      <tbody>
+      {{#each raffles}}
+        <tr>
+          <td><a href="{{ pathFor route='raffleView' }}" title="Click for raffle details">{{ title }}</a></td>
+          <td>{{ prettyDate date=startDate format='ddd, MMMM DD HH:mm' }}</td>
+          <td>{{ prettyDate date=endDate format='ddd, MMMM DD HH:mm' }}</td>
+          <td>{{ currency entryPrice }}</td>
+          <td>{{ currency retailPrice }}</td>
+          {{#if isAdmin}}
+          <td><a href="{{ pathFor route='raffleEdit' }}"><i class="glyphicon glyphicon-cog"></i></a></td>
+          {{/if}}
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
 </template>

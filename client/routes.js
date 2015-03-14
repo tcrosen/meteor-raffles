@@ -2,8 +2,18 @@ Router.configure({
   layoutTemplate: 'layout'
 });
 
-var checkAdmin = function() {
+// Make sure the user is logged in
+var checkLoggedIn = function() {
   if (!Meteor.user()) {
+    this.redirect('/');
+  } else {
+    this.next();
+  }
+};
+
+// Make sure the user is logged in AND an admin
+var checkAdmin = function() {
+  if (!Helpers.isAdmin) {
     this.redirect('/');
   } else {
     this.next();
@@ -15,7 +25,7 @@ Router.map(function() {
     path: '/'
   });
 
-  this.route('raffles', {
+  this.route('raffleList', {
     path: '/raffles',
     template: 'raffleList',
     data: function() {
@@ -31,7 +41,7 @@ Router.map(function() {
     onBeforeAction: checkAdmin
   });
 
-  this.route('raffle', {
+  this.route('raffleView', {
     path: '/raffles/:_id',
     template: 'raffleView',
     data: function() {
@@ -52,6 +62,4 @@ Router.map(function() {
     path: '/admin',
     onBeforeAction: checkAdmin
   });
-
-  //this.route('enterRaffle', { path: '/raffles/:id/enter' });
 });
