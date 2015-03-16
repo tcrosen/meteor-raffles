@@ -11,7 +11,8 @@ Template.home.events({
     StripeCheckout.open({
       key: 'pk_test_KDjAC5QV8GJwlG94xukBiYmd',
       amount: 600,
-      name: 'iPad Air Raffle Entry',
+      name: 'Raffles',
+      description: '1 iPad Air Raffle Entry Ticket',
       panelLabel: 'Enter Draw',
       currency: 'cad',
       email: 'tcrosen@gmail.com',
