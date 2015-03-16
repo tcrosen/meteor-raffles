@@ -1,3 +1,5 @@
+/* Global styles */
+
 body {
   padding: 30px;
 }
@@ -17,6 +19,16 @@ table > thead.centered > tr > th {
   text-align: center;
 }
 
+/* Buttons */
+.btn > .glyphicon-right {
+  padding-left: 10px;
+}
+
+.btn > .glyphicon-left {
+  padding-right: 10px;
+}
+
+/* Navbar */
 .navbar-brand {
   margin-right: 40px;
 }
@@ -28,6 +40,7 @@ table > thead.centered > tr > th {
   line-height: 30px;
 }
 
+/* Helpers */
 .align-right {
   text-align: right;
 }
@@ -36,6 +49,7 @@ table > thead.centered > tr > th {
   text-align: center;
 }
 
+/* Raffles */
 .raffle {
 }
 
@@ -63,6 +77,6 @@ table > thead.centered > tr > th {
 .raffle-assurances .glyphicon {
   font-size: 36px;
   display: block;
-  margin-bottom: 16px;
+  margin: 20px 0;
   color: #999;
 }

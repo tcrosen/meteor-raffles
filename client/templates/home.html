@@ -8,10 +8,10 @@
       <h1>{{ title }}</h1>
       <p>
         Ends in: <strong class="raffle-ends-in">{{ dateFromNow endDate }}</strong>
-        <br> Tickets Remaining: <strong>{{ ticketsRemaining }}</strong>
-        <br>
+        <br>Tickets Remaining: <strong>{{ ticketsRemaining }}</strong>
+        <br>Retail Price: <strong>{{ currency retailPrice }}</strong>
       </p>
-      <a href="{{ pathFor 'raffleEnter' }}" class="btn btn-success btn-lg btn-buy-ticket">Buy Ticket ${{ entryPrice }}</a>
+      <a href="{{ pathFor 'raffleEnter' }}" class="btn btn-success btn-lg btn-buy-ticket"> <i class="glyphicon glyphicon-shopping-cart glyphicon-left"></i>Buy Ticket {{ currency entryPrice }}</a>
     </div>
   </div>
   {{/with}}
