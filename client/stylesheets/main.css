@@ -37,7 +37,6 @@ table > thead.centered > tr > th {
 }
 
 .raffle {
-  text-align: center;
 }
 
 .raffle > h1 {
@@ -50,4 +49,20 @@ table > thead.centered > tr > th {
 }
 
 .raffle-main-image {
+}
+
+.raffle-assurances {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.raffle-assurances > div:first-child {
+  border-right: 1px solid #eee;
+}
+
+.raffle-assurances .glyphicon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 16px;
+  color: #999;
 }

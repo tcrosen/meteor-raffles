@@ -1,15 +1,36 @@
 <template name="home">
   {{#with currentRaffle}}
-  <div class="col-xs-12 col-md-6 col-md-offset-3 raffle">
-    <h1>{{ title }}</h1>
-    <p>
-      Ends in: <strong class="raffle-ends-in">{{ dateFromNow endDate }}</strong><br>
-      Tickets Remaining: <strong>{{ ticketsRemaining }}</strong><br>
-    </p>
-    <p>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 raffle">
       <img class="raffle-main-image center-block img-responsive" src="{{ mainImage }}" alt="{{ title }}">
-    </p>
-    <a href="{{ pathFor 'raffleEnter' }}" class="btn btn-success btn-lg btn-block btn-buy-ticket">Buy Ticket ${{ entryPrice }}</a>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <h1>{{ title }}</h1>
+      <p>
+        Ends in: <strong class="raffle-ends-in">{{ dateFromNow endDate }}</strong>
+        <br> Tickets Remaining: <strong>{{ ticketsRemaining }}</strong>
+        <br>
+      </p>
+      <a href="{{ pathFor 'raffleEnter' }}" class="btn btn-success btn-lg btn-buy-ticket">Buy Ticket ${{ entryPrice }}</a>
+    </div>
   </div>
   {{/with}}
+  <div class="row raffle-assurances">
+    <div class="col-xs-12 col-md-6">
+      <i class="glyphicon glyphicon-lock"></i>
+      <p>
+        <strong>Your privacy is important to us</strong><br>
+        We don't collect any personal or financial information.<br>
+        <a href="#">Learn more about our privacy policies</a>.
+      </p>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <i class="glyphicon glyphicon-usd"></i>
+      <p>
+        <strong>Secure payments</strong><br>
+        All payments are handled through <a href="https://stripe.com" target="_blank">Stripe</a>, a world-leader in payment solutions.<br>
+        <a href="https://stripe.com/help/security" target="_blank">Learn more about Stripe and your financial security</a>.
+      </p>
+    </div>
+  </div>
 </template>
