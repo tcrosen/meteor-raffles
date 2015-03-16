@@ -53,6 +53,14 @@ Router.map(function() {
     }
   });
 
+  this.route('raffleEnter', {
+    path: '/raffles/:_id/enter',
+    template: 'raffleEnter',
+    data: function() {
+      return Raffles.findOne(this.params._id)
+    }
+  });
+
   this.route('raffleEdit', {
     path: '/raffles/:_id/edit',
     template: 'raffleEdit',

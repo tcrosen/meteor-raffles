@@ -9,7 +9,7 @@
     <p>
       <img class="raffle-main-image center-block img-responsive" src="{{ mainImage }}" alt="{{ title }}">
     </p>
-    <a href="/raffles/{{ _id }}" class="btn btn-success btn-lg btn-block btn-buy-ticket">Buy Ticket ${{ entryPrice }}</a>
+    <a href="{{ pathFor 'raffleEnter' }}" class="btn btn-success btn-lg btn-block btn-buy-ticket">Buy Ticket ${{ entryPrice }}</a>
   </div>
   {{/with}}
 </template>
