@@ -1,0 +1,88 @@
+.landing {
+  text-align: center;
+}
+
+.landing h1 {
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.landing p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.landing p.lead {
+}
+
+.landing .btn {
+  text-transform: none;
+}
+
+.landing .heading-icon {
+  font-size: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.landing .btn-primary > .glyphicon {
+  padding-left: 10px;
+  max-width: 200px;
+}
+
+.landing-image {
+  max-width: 240px;
+  margin-bottom: 30px;
+}
+
+
+.landing .todays-raffle {
+  width: 100%;
+}
+
+.landing .todays-raffle img {
+  max-width: 200px;
+}
+
+.landing .todays-raffle .raffle-title {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .landing {
+    padding-top: 40px;
+  }
+
+  .landing h1 {
+    font-size: 48px;
+  }
+
+  .landing .row {
+    margin-bottom: 20px;
+  }
+
+  .landing .lead {
+    font-size: 22px;
+  }
+
+  .landing-image {
+    max-width: 100%;
+  }
+
+  .landing .todays-raffle img {
+    max-width: 600px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }

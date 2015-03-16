@@ -21,8 +21,12 @@ var checkAdmin = function() {
 };
 
 Router.map(function() {
-  this.route('home', {
+  this.route('landing', {
     path: '/'
+  });
+
+  this.route('home', {
+    path: '/home'
   });
 
   this.route('raffleList', {

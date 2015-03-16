@@ -17,6 +17,17 @@ table > thead.centered > tr > th {
   text-align: center;
 }
 
+.navbar-brand {
+  margin-right: 40px;
+}
+
+.navbar-nav > li > a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 16px;
+  line-height: 30px;
+}
+
 .align-right {
   text-align: right;
 }
