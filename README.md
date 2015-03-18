@@ -1,10 +1,14 @@
 # Raffles
 
-A Meteor.js test application for hosting raffles.
+A Meteor.js test application for hosting raffles.  *Not for production use*
 
-Makes use of the following integrations:
+Includes the following integrations/packages:
 
-- Meteor Roles 
 - Moment.js
 - Stripe Checkout
 - Bootstrap 3
+- User Roles 
+- Collection2 with Schemas
+- Autoform
+- Mongol
+- Houston Admin
